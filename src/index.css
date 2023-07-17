@@ -1,0 +1,38 @@
+* { margin: 0; box-sizing: border-box; color: #eee; font-family: 'Roboto', sans-serif;  }
+body { height: 100vh; width: 100%; background: url(./ingame.jpg); background-size: cover; background-position: center bottom;  }
+#root { width: 100%; height: 100%; position: relative; display: flex; gap: 100px;  padding: 40px 100px; align-items: center;
+   justify-content: center; background: rgba(0,0,0,0.35); animation: wejscieSmooth 0.5s; backdrop-filter: blur(15px);
+}
+.container { opacity: 0; animation: wejscieSmooth2 .5s forwards; animation-delay: 0.5s; }
+.oknoEkwipunek, .oknoPostac { display: flex; gap: 20px; padding: 20px;
+  background: rgba(14,14,14,0.6); border-radius: 15px; box-shadow: 0 0 25px 0 #111; 
+  opacity: 0; animation: wejscieSmooth2 .5s forwards; animation-delay: 0.5s; flex-direction: column;}
+.oknoEkwipunek { animation-delay: 0.5s; min-width: 600px; flex-grow: 1; height: 650px; gap: 10px; padding-right: 0; }
+.oknoEkwipunek h3 { text-transform: uppercase; font-weight: 900; font-size: 1.8rem; text-shadow: 1px 1px 3px #111; letter-spacing: 2px;}
+.postacRow, .postacCol { display: flex;  flex-direction: column; align-items: center; gap: 20px; justify-content: center;}
+.postacRow { flex-direction: row; gap: 20px; }
+.postacImg { background-image: url(./kowbojek.png); width: 355px; height: 507px; background-position: center bottom; background-size: cover; filter: brightness(0.8) drop-shadow(2px 4px 6px #111); }
+.itemek, .postacMiejsce { background: rgba(0,0,0,0.35); color: #eee; width: 80px; height: 80px; border-radius: 10px; border: 3px solid #3a3a3a;
+  box-shadow: inset 0 0 15px 1px #111;
+}
+.ekwipunek { display: flex; flex-direction: column; padding: 10px; }
+.ekwipunek h3 { font-size: 1.3rem;}
+.ekwipunekTytulowe { display: flex; justify-content: space-between; align-items: center;}
+.ekwipunek .wagaText { transform: translateY(10px); }
+.wagaLinia { position: relative; background: #cdcdcd; display: block; content: " "; height: 8px; margin: 10px 0; overflow: hidden;}
+.wagaLiniaZapelnij { position: absolute; top: 0; height: 100%; width: 100%; right: 100%; background: goldenrod; transition: all 1.5s ease;}
+.ekwipunekGrid { padding: 10px 0; display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; justify-content: flex-start;}
+.ekwipunki { height: 570px; padding-right: 10px; overflow-y: auto; border-top: 2px solid #ccc; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { border-radius: 0 0 0 5px; background: rgba(255,255,255,0.1); }
+::-webkit-scrollbar-track:hover { background: rgba(255,255,255,0.15); }
+::-webkit-scrollbar-thumb { border-radius: 0 0 0 5px; background: #ccc; }
+
+@keyframes wejscieSmooth {
+  0% { opacity: 0; backdrop-filter: blur(0px); }
+  100% { opacity: 1; backdrop-filter: blur(15px); }
+}
+@keyframes wejscieSmooth2 {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
